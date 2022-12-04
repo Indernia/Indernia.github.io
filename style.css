@@ -1,0 +1,45 @@
+body{
+    margin: 0; background: rgb(9,9,121);
+    background: radial-gradient(circle, rgba(9,9,121,1) 0%, rgba(52,26,0,1) 70%, rgba(0,0,0,1) 075%);   
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+.Navbar{
+    background: rgba(251, 206, 177, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(10.2px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+.CalculateBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin:0px;
+    width: 100%;
+    height: 500px;
+    
+}
+#InputFields{
+    padding: 20px;
+    margin: 20px;
+}
+.inputBox{
+    height: 50%;
+    margin: 7%;
+    padding: 3%;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(10.2px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}

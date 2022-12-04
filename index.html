@@ -2,23 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototype website</title>
-    <Style>
-        .some {
-            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,87,87,1) 50%, rgba(255,255,255,1) 100%);
-        }
-    </Style>
+    <meta name="viewport" content="width=device-width">
+    <title>Sphericity</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="some">
-        <h1>
-            Welcome to my page
-        </h1>
-        <p>
-            Feel free to look at some <a href="https://google.com/search?q=cats">cats</a> while you are here
-        </p>
+<body >
+    <div class="Navbar">
+        <div class="flexContainer">
+            <div style="display: flex; flex-direction:row;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Sphere_-_monochrome_simple.svg" alt="logo" height="75px">
+                <h1><a href="https://en.wikipedia.org/wiki/Sphericity" style="color: black; text-decoration: none;">Sphericity</a></h1>
+            </div>
+            <div>
+                <h1 style="color:black;"><a href="index.html" style="color: black; text-decoration: none;">Calculate</a></h1>
+            </div>
+            <div>
+                <h1 style="color: black; padding:25px;"><a href="index.html" style="color: black; text-decoration: none;">About</a></h1>
+            </div>
+
+        </div>
+    </div>
+    <div class="CalculateBox">
+        <div class="inputBox">
+            <div>
+                <p>
+                    let us make some calculations of sphericity
+                </p>
+            </div>
+            <div id="InputFields">
+                <label for="volume">Volume</label>
+                <input type="number" id="volume"> <br>
+                <label for="surfaceArea">Surface area</label>
+                <input type="number" id="surfaceArea"><br>
+            </div>
+            <div>
+                        <p>
+                            <button onclick=getSphericity()>Calculate</button>
+                        </p>    
+                    <div>
+                        <p id="sphericity" style="font-family:Comic-Sans ;">Press Calculate to see the sphericity</p>
+                    </div>
+            </div>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Sphere_-_monochrome_simple.svg" alt="logo" height="500px">
+        </div>
     </div>
 </body>
+
+<script>
+    //get the input fields
+    function getSphericity(){
+        let volume = document.getElementById("volume").value;
+        let surfaceArea = document.getElementById("surfaceArea").value;
+        let sphericity = (((Math.PI**(1/3))*((6*volume)**(2/3)))/surfaceArea);
+        console.log(sphericity);
+        document.getElementById("sphericity").innerHTML = sphericity;
+        return sphericity;
+    }
+</script>
 </html>
